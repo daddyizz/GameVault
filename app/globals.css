@@ -130,3 +130,33 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 
 /* GameVault V0.7 detail & navigation additions */
 .relatedSection{margin-top:58px}.relatedSection h2{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(30px,5vw,48px);margin:15px 0 25px}.relatedGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.relatedCard{display:flex;min-height:126px;flex-direction:column;justify-content:center;gap:12px;padding:22px;background:#171717;border:1px solid #343434;border-radius:10px;transition:border-color .2s,transform .2s}.relatedCard:hover{transform:translateY(-3px);border-color:#df3043}.relatedCard span{font-size:10px;letter-spacing:1px;color:#f44a5c;font-weight:800}.relatedCard strong{font-size:17px}.relatedCard svg{align-self:flex-end;color:#eee}.missingPage{display:flex;min-height:75vh;align-items:center;justify-content:center;flex-direction:column;gap:18px;padding:40px 20px;text-align:center}.missingPage svg{color:#e22b3c}.missingPage h1{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(45px,8vw,80px);margin:0}.missingPage p{color:#aaa}.loadingShell{padding:50px 0;animation:gvPulse 1.3s infinite alternate}.loadingBlock{height:300px;border-radius:16px;background:#202020;margin-bottom:30px}.loadingLine{height:22px;background:#202020;border-radius:7px;margin:15px 0;width:65%}.loadingLine.short{width:40%}@keyframes gvPulse{to{opacity:.4}}@media(max-width:650px){.relatedGrid{grid-template-columns:1fr}.relatedCard{min-height:100px}}
+
+
+/* GameVault admin styling */
+.adminWrap{max-width:1220px;margin:auto;padding:35px 24px 100px;min-height:100vh}
+.adminWrap h1{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(42px,7vw,74px);margin:12px 0}.adminWrap h1 span{color:#f34356}
+.adminWrap p{color:#aaa;line-height:1.6}
+.adminTop{display:flex;justify-content:space-between;align-items:center;gap:22px}
+.adminLayout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:30px}
+.adminPanel{background:#141414;border:1px solid #363636;border-radius:12px;padding:24px}
+.adminPanel h2{font-size:20px;display:flex;align-items:center;gap:9px;margin:0 0 24px}
+.adminForm{display:grid;gap:15px;max-width:580px}
+.adminForm label{display:grid;gap:8px;font-size:12px;font-weight:700;color:#eee}
+.adminForm input,.adminForm textarea{width:100%;background:#0c0c0c;border:1px solid #444;color:#fff;border-radius:7px;padding:12px;outline:0}
+.adminForm input:focus,.adminForm textarea:focus{border-color:#f34356}
+.adminForm .adminCheck{display:flex;align-items:center;gap:10px}
+.adminCheck input{width:16px;height:16px;accent-color:#e22f45}
+.adminButtons,.adminListHeading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.adminButtons{justify-content:start}
+.adminButtons button,.adminSecondary{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:700}
+.adminSecondary{border:1px solid #484848;background:#222;color:#f4f4f4;border-radius:7px;padding:10px 12px}
+.adminSecondary:hover{border-color:#eee}
+.adminSecondary.danger{color:#ff5568}
+.adminRow{border-top:1px solid #333;padding:15px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.adminRow>div:last-child{display:flex;gap:7px}
+.adminRow strong,.adminRow small{display:block}
+.adminRow strong{font-size:13px}
+.adminRow small{font-size:10px;color:#999;margin-top:5px}
+.adminHint{font-size:12px}
+.adminError{border:1px solid #e22a42;background:#3d1018;color:#fff!important;padding:14px;border-radius:7px}
+@media(max-width:750px){.adminLayout{grid-template-columns:1fr}.adminTop{align-items:start;flex-direction:column}}
