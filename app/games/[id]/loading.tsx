@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="detailPage"><div className="loadingShell" aria-label="Loading game details"><div className="loadingBlock"/><div className="loadingLine"/><div className="loadingLine short"/></div></div>}
