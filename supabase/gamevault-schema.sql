@@ -16,6 +16,8 @@ create table if not exists public.gv_games (
 alter table public.gv_admins enable row level security;
 alter table public.gv_games enable row level security;
 revoke all on public.gv_admins from anon, authenticated;
+grant select on public.gv_admins to authenticated;
+create policy "gv admins can read own membership" on public.gv_admins for select to authenticated using (user_id = (select auth.uid()));
 grant select,insert,update,delete on public.gv_games to authenticated;
 grant select on public.gv_games to anon;
 drop policy if exists "gv public published" on public.gv_games;
