@@ -160,3 +160,11 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminHint{font-size:12px}
 .adminError{border:1px solid #e22a42;background:#3d1018;color:#fff!important;padding:14px;border-radius:7px}
 @media(max-width:750px){.adminLayout{grid-template-columns:1fr}.adminTop{align-items:start;flex-direction:column}}
+
+/* Explicit publication controls and safe responsive admin actions */
+.adminRow>div:last-child{flex-wrap:wrap;justify-content:flex-end}
+.adminPublish{border-color:#b42a3c;color:#fff;background:#4b1420}
+.adminPublish:hover{border-color:#f34356}
+.adminSecondary:disabled{opacity:.5;cursor:not-allowed}
+.adminSecondary.danger{border-color:#713039;color:#ff8a98;background:#271015}
+@media(max-width:580px){.adminRow{align-items:flex-start;flex-direction:column}.adminRow>div:last-child{justify-content:flex-start;width:100%}.adminRow>div:last-child button{min-height:38px}}
