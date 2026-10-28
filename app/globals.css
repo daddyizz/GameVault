@@ -61,3 +61,47 @@ footer{background:#080808;border-color:#292929;color:#979797}
 .feature{background:#222;color:#eee}
 .official{background:#ededed;color:#090909}
 @media(max-width:650px){.topbar{padding:0 20px}.nav{background:#111;border-bottom:1px solid #333}.cinemaHero{min-height:510px}.cinemaScene{opacity:.2}}
+
+
+/* GAMEVAULT RED BLACK WHITE V0.5 */
+:root{--vault-black:#080808;--vault-red:#e11d2e;--vault-red-bright:#ff364a;--vault-white:#f7f7f7;--vault-gray:#161616}
+body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse at 80% -20%,#3c0b0f 0%,#080808 42%)}
+.brandIcon{background:linear-gradient(135deg,#fa3346,#a80e1c);color:white;box-shadow:0 0 23px #e11d2e35}
+.brand span:not(.brandIcon){color:#fff}
+.brand small{color:#af7279}
+.nav a:hover,.navCta:hover{color:#ff5364}
+.navCta:hover{border-color:#e11d2e}
+.cinemaHero{background:linear-gradient(90deg,#080808 0%,#0c090a 45%,#261013 100%)}
+.cinemaHero h1 span,.closing h2 span{color:#ff394c;-webkit-text-stroke:0}
+.eyebrow{color:#ff4a5b}
+.primary{background:linear-gradient(115deg,#f1293e,#be1526);color:#fff;border-color:#f04554;box-shadow:0 10px 40px #c9002230}
+.primary:hover{background:#ff374c;color:#fff;box-shadow:0 10px 50px #e11d2e50}
+.sceneRing{border-color:#f12a4040;box-shadow:inset 0 0 70px #f12a400a,0 0 65px #f12a4010}
+.sceneCore{background:radial-gradient(circle,#ff435737,#68131c65 43%,#0a0809 75%);color:#fff;box-shadow:0 0 125px #d91a3035}
+.sceneCaption{color:#eee}.ticker span:nth-child(even){color:#ff465b}
+.spotText h2 span,.sectionHeading h2 span{color:#ff3c50}
+.outlineCta{border-color:#96313d;color:#fff;background:#1b1012}
+.outlineCta:hover{background:#351318;border-color:#ef3349}
+.spotArt{background:linear-gradient(135deg,#230e11,#0d0d0d);border-color:#66242e}
+.spotArtInner{background:radial-gradient(circle at 65% 25%,#e6324740,transparent 55%),linear-gradient(0deg,#090909,#271015)}
+.spotArtInner svg{color:#ffe3e6;filter:drop-shadow(0 0 30px #dd304a80)}
+.spotArtInner span{color:#ff8e9b}
+.collectionCount{color:#ef394c}
+.search:focus-within{border-color:#e23349;box-shadow:0 0 0 2px #e233491f}
+.chips button.active{background:#d92538;color:#fff;border-color:#ed3347}
+.chips button:hover:not(.active){border-color:#9f3a46;color:#fff}
+.game:hover{border-color:#d8293d;box-shadow:0 22px 65px #c41d3020}
+.art{background:radial-gradient(ellipse at 70% 25%,#55232b 0%,#211014 44%,#090909 100%)!important}
+.artHalo{border-color:#ff53643b;box-shadow:0 0 65px #ec344929}
+.artSymbol{color:#fff;filter:drop-shadow(0 0 23px #ff42585e)}
+.tag{border-color:#a93243;color:#fff}
+.cardLink{color:#ff5668}
+.loadMore{background:#1d1013;color:#fff;border-color:#8e2b39}
+.loadMore:hover{background:#35141a;border-color:#f03b50}
+.closing{background:radial-gradient(ellipse at center,#3d1018 0%,#140b0d 46%,#080808 85%);border-top-color:#4d1f27}
+.footerBrand svg,.footerBrand span{color:#f04455}
+.backLink{color:#ff5d6e}
+.official{background:#d92337;color:white}
+.official:hover{background:#f13449}
+@media(max-width:650px){.nav{background:#120c0d;border-bottom-color:#532029}}
+@media(prefers-reduced-motion:reduce){.game:hover{transform:none}}
