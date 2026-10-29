@@ -272,3 +272,17 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminRow .adminGameIdentity>img,.adminRow .adminNoCover{width:96px;max-width:30%;flex-shrink:0}
 @media(max-width:750px){.adminLayout{grid-template-columns:minmax(0,1fr)}.adminWrap{width:100%;max-width:760px;margin-inline:auto}.adminDashboard,.adminMediaManager{grid-column:1}}
 @media(max-width:580px){.adminWrap{padding:20px 12px 70px}.adminPanel{padding:16px}.adminRow .adminGameIdentity>img,.adminRow .adminNoCover{width:92px}.adminRow>div:last-child button{font-size:11px;padding:9px 10px}.adminPanel h2{font-size:18px}}
+
+/* v1 catalog controls, admin safe bulk actions */
+.adminCatalogControls{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
+.adminCatalogControls>.adminCheck{display:flex;align-items:center;gap:7px}
+.adminCatalogControls input[type=checkbox]{width:17px;height:17px;accent-color:#e11d2e}
+.adminLinkCheck{display:inline-flex;align-items:center;gap:7px;color:#ff8190;text-decoration:underline;text-underline-offset:3px;font-size:11px;overflow-wrap:anywhere}
+.adminBulkPanel{background:#130f11;border:1px solid #49313a;border-radius:9px;margin:14px 0;padding:12px;display:grid;gap:10px}
+.adminBulkSelection{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#ddd;font-size:12px}
+.adminBulkSelection label{display:flex;align-items:center;gap:8px}
+.adminBulkSelection input,.adminRowSelect{width:17px;height:17px;accent-color:#e11d2e;flex-shrink:0}
+.adminBulkPanel .adminButtons{display:flex;gap:8px;flex-wrap:wrap}
+.adminBulkPanel .adminButtons button{font-size:11px;min-height:37px}
+.adminRow>.adminGameIdentity .adminRowSelect{margin:0 2px 0 0}
+@media(max-width:580px){.adminCatalogControls{grid-template-columns:1fr}.adminBulkSelection{flex-wrap:wrap}}
