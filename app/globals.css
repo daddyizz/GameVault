@@ -187,3 +187,12 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminNoCover{display:grid;place-items:center;color:#888}
 .adminGameIdentity>div:last-child{min-width:0;overflow-wrap:anywhere}
 @media(max-width:580px){.adminGameIdentity>img,.adminNoCover{width:90px}.adminStats b{font-size:18px}}
+
+/* Cover image upload: admin v1.0 */
+.adminUpload{display:grid;gap:8px;padding:12px;border:1px dashed #62313a;border-radius:9px;background:#120d0f}
+.adminUploadButton{display:flex!important;flex-direction:row!important;align-items:center;justify-content:center;gap:10px;position:relative;min-height:44px;padding:12px;border:1px solid #b32a3d;border-radius:8px;background:#35131b;color:#fff!important;cursor:pointer;text-align:center}
+.adminUploadButton:hover{background:#4e1824}
+.adminUploadButton input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.adminUploadButton input:disabled{cursor:not-allowed}
+.adminUpload small{font-size:10px;color:#aaa}
+.adminUploadSuccess{font-size:11px!important;color:#a8e6c2!important;margin:0}
