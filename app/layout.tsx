@@ -2,7 +2,7 @@ import './globals.css';
 import type {Metadata,Viewport} from 'next';
 import {Inter,Barlow_Condensed} from 'next/font/google';
 const inter=Inter({subsets:['latin'],display:'swap',variable:'--gv-inter',weight:['400','500','600','700','800']});
-const barlow=Barlow_Condensed({subsets:['latin'],display:'swap',variable:'--gv-barlow',weight:['600','700','800','900']});
+const barlow=Barlow_Condensed({subsets:['latin'],display:'optional',preload:true,variable:'--gv-barlow',weight:['600','700','800','900']});
 
 export const metadata:Metadata={
   metadataBase:new URL('https://game-vault-ochre.vercel.app'),
