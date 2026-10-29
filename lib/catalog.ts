@@ -1,14 +1,14 @@
 import {games, type Game} from './games';
 import {createClient} from '@supabase/supabase-js';
 
-export type PublishedGame={id:string;title:string;genre:string;description:string;download_url:string;cover_url:string;published:boolean;platform:string;version:string;file_size:string;release_date:string|null;screenshots:string[]};
+export type PublishedGame={id:string;title:string;genre:string;description:string;download_url:string;cover_url:string;published:boolean;platform:string;version:string;file_size:string;release_date:string|null;screenshots:string[];featured:boolean;sort_order:number};
 const url=process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
 export async function loadCatalog():Promise<{games:Game[];covers:Record<string,string>;details:Record<string,{version:string;file_size:string;release_date:string|null;screenshots:string[]}>}>{
   if(!url||!key)return {games,covers:{},details:{}};
   const client=createClient(url,key,{auth:{persistSession:false,autoRefreshToken:false}});
-  const {data,error}=await client.from('gv_games').select('id,title,genre,description,download_url,cover_url,published,platform,version,file_size,release_date,screenshots').eq('published',true).order('created_at',{ascending:false});
+  const {data,error}=await client.from('gv_games').select('id,title,genre,description,download_url,cover_url,published,platform,version,file_size,release_date,screenshots,featured,sort_order').eq('published',true).order('featured',{ascending:false}).order('sort_order',{ascending:true}).order('created_at',{ascending:false});
   if(error){console.error('GameVault catalog:',error.message);return {games,covers:{},details:{}};}
   const covers:Record<string,string>={};
   const details:Record<string,{version:string;file_size:string;release_date:string|null;screenshots:string[]}>={};
@@ -20,5 +20,8 @@ export async function loadCatalog():Promise<{games:Game[];covers:Record<string,s
     const prior=merged.get(row.id);
     merged.set(row.id,{id:row.id,title:row.title,genre:row.genre,description:row.description,url:row.download_url,tag:prior?.tag||'FREE DOWNLOAD',gradient:prior?.gradient||'#a52a34',year:prior?.year||'',platform:row.platform||prior?.platform||'PC',features:prior?.features||[]});
   }
-  return {games:[...merged.values()],covers,details};
+  const dbRows=((data||[]) as PublishedGame[]).filter(r=>r.published);
+  const dbIds=new Set(dbRows.map(r=>r.id));
+  const orderedIds=[...dbRows.map(r=>r.id),...games.filter(g=>!dbIds.has(g.id)).map(g=>g.id)];
+  return {games:orderedIds.map(id=>merged.get(id)!).filter(Boolean),covers,details};
 }
