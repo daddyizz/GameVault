@@ -9,7 +9,7 @@ export async function loadCatalog():Promise<{games:Game[];covers:Record<string,s
   if(!url||!key)return {games,covers:{},details:{}};
   const client=createClient(url,key,{auth:{persistSession:false,autoRefreshToken:false}});
   const {data,error}=await client.from('gv_games').select('id,title,genre,description,download_url,cover_url,published,platform,version,file_size,release_date,screenshots').eq('published',true).order('created_at',{ascending:false});
-  if(error){console.error('GameVault catalog:',error.message);return {games,covers:{}};}
+  if(error){console.error('GameVault catalog:',error.message);return {games,covers:{},details:{}};}
   const covers:Record<string,string>={};
   const details:Record<string,{version:string;file_size:string;release_date:string|null;screenshots:string[]}>={};
   const merged=new Map<string,Game>(games.map(g=>[g.id,g]));
