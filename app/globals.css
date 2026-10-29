@@ -260,3 +260,15 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminPreviewGallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .adminPreviewGallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;border:1px solid #353535}
 .adminPreview>.adminHint{margin:0;padding:12px 17px;border-top:1px solid #333}
+
+/* GameVault admin responsive repair: actions must never crush game titles */
+.adminLayout>.adminPanel{min-width:0}
+.adminRow{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+.adminRow>.adminGameIdentity{display:flex;align-items:center;width:100%;min-width:0;flex:none;gap:12px}
+.adminRow>.adminGameIdentity>div:last-child{flex:1 1 0;min-width:0;overflow-wrap:normal;word-break:normal}
+.adminRow .adminGameIdentity strong,.adminRow .adminGameIdentity small{white-space:normal;overflow-wrap:break-word;word-break:normal;line-height:1.5}
+.adminRow>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-start;width:100%;gap:8px}
+.adminRow>div:last-child button{flex:0 0 auto;min-height:38px}
+.adminRow .adminGameIdentity>img,.adminRow .adminNoCover{width:96px;max-width:30%;flex-shrink:0}
+@media(max-width:1100px){.adminLayout{grid-template-columns:minmax(0,1fr)}.adminWrap{width:100%;max-width:760px;margin-inline:auto}.adminDashboard,.adminMediaManager{grid-column:1}}
+@media(max-width:580px){.adminWrap{padding:20px 12px 70px}.adminPanel{padding:16px}.adminRow .adminGameIdentity>img,.adminRow .adminNoCover{width:92px}.adminRow>div:last-child button{font-size:11px;padding:9px 10px}.adminPanel h2{font-size:18px}}
