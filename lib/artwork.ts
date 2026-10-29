@@ -1,6 +1,6 @@
 // Game screenshots from Wikimedia Commons. Each image links to its source and license page.
 // Screenshot availability depends on Wikimedia's public media service.
-const commons=(file:string)=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=1100';
+const commons=(file:string)=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=720';
 const source=(file:string)=>'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file.replace(/ /g,'_'));
 export const gameArtwork:Record<string,{images:string[];credit:string;creditUrl:string}>={
 '0ad':{images:[commons('0 A.D. - blacksmiths.jpg'),commons('0 A.D. - Cité koushite.jpg')],credit:'Wikimedia Commons',creditUrl:source('0 A.D. - blacksmiths.jpg')},
