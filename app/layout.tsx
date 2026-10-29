@@ -1,5 +1,8 @@
 import './globals.css';
 import type {Metadata,Viewport} from 'next';
+import {Inter,Barlow_Condensed} from 'next/font/google';
+const inter=Inter({subsets:['latin'],display:'swap',variable:'--gv-inter',weight:['400','500','600','700','800']});
+const barlow=Barlow_Condensed({subsets:['latin'],display:'swap',variable:'--gv-barlow',weight:['600','700','800','900']});
 
 export const metadata:Metadata={
   metadataBase:new URL('https://game-vault-ochre.vercel.app'),
@@ -13,4 +16,4 @@ export const metadata:Metadata={
   robots:{index:true,follow:true}
 };
 export const viewport:Viewport={width:'device-width',initialScale:1,themeColor:'#080910'};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className={`${inter.variable} ${barlow.variable}`}><body>{children}</body></html>}
