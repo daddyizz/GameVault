@@ -208,3 +208,13 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminScreenshotGrid img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .adminScreenshotGrid button{width:100%;background:#281015;color:#ff9da9;border:0;border-top:1px solid #49212b;padding:9px;font-size:11px}
 @media(max-width:480px){.adminMetadata{grid-template-columns:1fr}}
+
+/* GameVault image management */
+.adminImageActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px}
+.adminScreenshotGrid .adminImageActions button{display:flex;align-items:center;justify-content:center;min-height:35px;padding:8px 5px;border:1px solid #37242a}
+.adminScreenshotGrid .adminImageActions button:nth-child(3){color:#fff;background:#471821}
+.adminScreenshotGrid .adminImageActions button:disabled{opacity:.35;cursor:not-allowed}
+.adminMediaManager{grid-column:1/-1}
+.adminMediaManager .adminButtons{display:flex;flex-wrap:wrap;gap:10px}
+.adminUnusedPreview{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:12px}
+.adminUnusedPreview span{overflow-wrap:anywhere;padding:9px;border-radius:6px;background:#0b0b0b;color:#aaa;font-size:10px;border:1px solid #343434}
