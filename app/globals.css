@@ -196,3 +196,15 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminUploadButton input:disabled{cursor:not-allowed}
 .adminUpload small{font-size:10px;color:#aaa}
 .adminUploadSuccess{font-size:11px!important;color:#a8e6c2!important;margin:0}
+
+/* GameVault admin metadata and screenshots */
+.adminMetadata{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.adminMetadata label{min-width:0}
+.adminScreenshots{display:grid;gap:11px;background:#111;border:1px solid #333;padding:12px;border-radius:9px}
+.adminScreenshots h3{font-size:13px;margin:0;color:#fff}
+.adminScreenshots small{font-size:10px;color:#aaa}
+.adminScreenshotGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.adminScreenshotGrid>div{min-width:0;background:#080808;border:1px solid #333;border-radius:8px;overflow:hidden}
+.adminScreenshotGrid img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.adminScreenshotGrid button{width:100%;background:#281015;color:#ff9da9;border:0;border-top:1px solid #49212b;padding:9px;font-size:11px}
+@media(max-width:480px){.adminMetadata{grid-template-columns:1fr}}
