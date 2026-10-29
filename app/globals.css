@@ -218,3 +218,23 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminMediaManager .adminButtons{display:flex;flex-wrap:wrap;gap:10px}
 .adminUnusedPreview{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:12px}
 .adminUnusedPreview span{overflow-wrap:anywhere;padding:9px;border-radius:6px;background:#0b0b0b;color:#aaa;font-size:10px;border:1px solid #343434}
+
+/* GameVault Admin statistics */
+.adminDashboard{grid-column:1/-1}
+.adminDashboard .adminListHeading{flex-wrap:wrap;margin-bottom:16px}
+.adminDashboard .adminListHeading h2{margin:0}
+.adminDashboardGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.adminDashboardGrid>div{background:#0c0c0c;border:1px solid #393036;border-radius:9px;padding:16px;min-width:0}
+.adminDashboardGrid small{display:block;color:#aaa;font-size:11px}
+.adminDashboardGrid strong{display:block;font-size:clamp(22px,3vw,32px);color:#fff;margin-top:8px;font-variant-numeric:tabular-nums}
+.adminDashboardLower{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:15px}
+.adminDashboardSub{border:1px solid #343434;background:#101010;border-radius:9px;padding:16px;min-width:0}
+.adminDashboardSub h3{display:flex;align-items:center;gap:8px;font-size:14px;margin:0 0 16px}
+.adminStorageNumbers{display:grid;gap:10px;font-size:12px;color:#999}
+.adminStorageNumbers strong{color:#fff;font-size:18px;margin-right:8px}
+.adminRecentGame{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid #333;font-size:12px}
+.adminRecentGame span{min-width:0;overflow-wrap:anywhere}
+.adminRecentGame small{display:block;color:#a5a5a5;font-size:10px;margin-top:4px}
+.adminRecentGame time{color:#aaa;white-space:nowrap;font-size:10px}
+@media(max-width:800px){.adminDashboardGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.adminDashboardLower{grid-template-columns:1fr}}
+@media(max-width:450px){.adminDashboardGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminDashboardGrid>div{padding:12px}.adminDashboard .adminListHeading{align-items:flex-start}}
