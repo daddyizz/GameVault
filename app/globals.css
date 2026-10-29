@@ -238,3 +238,6 @@ body{background:#080808;color:#f7f7f7;background-image:radial-gradient(ellipse a
 .adminRecentGame time{color:#aaa;white-space:nowrap;font-size:10px}
 @media(max-width:800px){.adminDashboardGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.adminDashboardLower{grid-template-columns:1fr}}
 @media(max-width:450px){.adminDashboardGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminDashboardGrid>div{padding:12px}.adminDashboard .adminListHeading{align-items:flex-start}}
+
+/* Responsive cinematic hero: preserve desktop art, skip off-screen mobile image bytes */
+.sceneCore picture{display:block;width:100%;height:100%}
